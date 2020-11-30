@@ -1,0 +1,146 @@
+// Mixin for text styles on Help Panel
+@mixin text($font-family, $font-size, $font-weight, $font-stretch, $font-style, $line-height, $letter-spacing, $font-color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-stretch: $font-stretch;
+    font-style: $font-style;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    color: $font-color;
+}
+
+// Mixin for Primeng table header text
+@mixin table-header-text($font-family, $font-size, $font-weight, $font-stretch, $font-style, $line-height, $letter-spacing, $font-color) {
+    font-family: $font-family;
+    font-size: $font-size !important;
+    font-weight: $font-weight !important;
+    font-stretch: $font-stretch;
+    font-style: $font-style;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    color: $font-color !important;
+}
+
+// Mixin for Primeng table data text
+@mixin table-data-text($font-family, $font-size, $font-weight, $font-stretch, $font-style, $line-height, $letter-spacing, $font-color) {
+    font-family: $font-family;
+    font-size: $font-size !important;
+    font-weight: $font-weight !important;
+    font-stretch: $font-stretch;
+    font-style: $font-style;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    color: $font-color !important;
+}
+
+// Css class for Page title
+.page-title-text {
+    @include text(Roboto, 18px, normal, normal, normal, normal, -0.06px, #38383e);  
+}
+
+// Css class for Card title
+.card-title-text {
+    @include text(Roboto, 18px, normal, normal, normal, normal, -0.06px, #838383);
+    text-transform: none;
+    margin-bottom: 0px;
+}
+
+// Css class for Table header title text
+.table-header-text {
+    @include table-header-text(Roboto, 13px, bold, normal, normal, 1.67, -0.04px, #495055);
+}
+
+// Css class for Table Data text
+.table-data-text {
+    @include table-data-text(Roboto, 14px, 300, normal, normal, 1.43, -0.05px, #1e1e2d);
+}
+
+// Css class for Request details card header on Product Request Create page
+.request-details-header {
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 46px;
+  
+    div.card-header {
+      height: inherit;
+    }
+}
+
+// Css style for internal Cards on Product Request Create/Edit page
+.internal-card-div {
+    margin: 15px 10px;
+    box-shadow: none;
+}
+
+// Css class for Align request fields row   
+.align-request-field-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); 
+    height: 70px; 
+    padding-top: 10px;
+}
+
+// Css class for Align request Textarea field row   
+.align-request-textarea-field-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); 
+    height: 95px; 
+    padding-top: 10px;
+}
+
+// Css class for Align request table Readonly column
+.align-request-readonly-column {
+    opacity: 0.7;
+}
+
+// Css class for Review toggle
+.review-toggle {
+    margin-top: 12px;
+}
+
+// Overriden Css class for Table filter textbox
+.ui-inputtext {
+    @include table-data-text(Roboto, 14px, 300, normal, normal, normal, -0.05px, #1e1e2d);
+}
+
+// Overriden Css class for Table Pagination
+.ui-paginator-page {
+    @include table-data-text(Roboto, 14px, 300, normal, normal, normal, -0.05px, #1e1e2d);
+}
+
+// Overriden Css class for Table filter dropdown
+.ui-dropdown-label-container {
+    @include table-data-text(Roboto, 14px, 300, normal, normal, normal, -0.05px, #1e1e2d);
+}
+
+// Overriden Css class for Table filter dropdown
+.ui-dropdown-items-wrapper {
+    .ui-dropdown-items {
+        @include table-data-text(Roboto, 14px, 300, normal, normal, normal, -0.05px, #1e1e2d);
+    }
+}
+
+// Overriden Css class for Table Paginator
+.ui-paginator {
+    .ui-dropdown {
+        float: left;
+
+        .ui-dropdown-items {
+            @include table-data-text(Roboto, 14px, 300, normal, normal, normal, -0.05px, #1e1e2d);
+        }
+    }
+
+    .ui-paginator-current {
+        float: right;
+        @include table-data-text(Roboto, 14px, 300, normal, normal, 2.286em, -0.05px, #1e1e2d);
+    }
+}
+
+// Overide toast message container class
+.toast-container {
+    @include table-header-text(Roboto, 13px, bold, normal, normal, 1.67, -0.04px, #495055);
+}
+
+// Overide ui-menuitem class
+.ui-menuitem {
+    font-family: Roboto !important;
+}

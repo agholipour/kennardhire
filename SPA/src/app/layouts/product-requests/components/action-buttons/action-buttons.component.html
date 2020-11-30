@@ -1,0 +1,10 @@
+<!-- Action buttons -->
+<div class="justify-content-between">
+    <button mat-mini-fab aria-label="return" class="btn-action" type="button" matTooltip="Return" [routerLink]="'/product-requests'">
+        <mat-icon>keyboard_return</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" type="submit" aria-label="submit" matTooltip="Submit a request"
+        (click)="saveProductRequest()" [disabled]='productRequestFormGroup.invalid || !productRequestFormGroup.dirty'>
+        <mat-icon>save</mat-icon>
+    </button>
+</div>

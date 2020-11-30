@@ -1,0 +1,14 @@
+<div  *ngIf="errorMessage$ | async as errorMessage"  class='alert alert-danger'>
+    Error: {{ errorMessage }}
+</div>
+<div class='card'>
+    <div class='heading card-header page-title-text'>
+       <span>{{pageTitle}}</span>
+        <ng-content select=".grid-toolbar-selector"></ng-content>
+    </div>
+    
+    <div class="card-body">
+        <ng-content select=".body"></ng-content>
+    </div>
+</div>
+

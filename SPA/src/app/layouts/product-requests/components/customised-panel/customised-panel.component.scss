@@ -1,0 +1,17 @@
+@import '../../../../../assets/scss/custom.scss';
+
+.card .card-body {
+    padding: 0rem 0px;
+    position: relative;
+}
+
+.grid-toolbar{
+    padding: 1em;
+}
+
+// Css class for Card Header on Table
+.card .card-header {
+    background-color:#9c27b0;
+    color: white;
+    height: 50px;
+}

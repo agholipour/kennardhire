@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductApproval.GraphQL", "ProductApproval.GraphQL", "{D3E122B4-9408-4C85-B930-80238BB1FEC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApproval.GraphQL.Core", "ProductApproval.GraphQL\ProductApproval.GraphQL.Core\ProductApproval.GraphQL.Core.csproj", "{A5930243-E33F-4637-B556-63DEADB321AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApproval.GraphQL.Infrastructure", "ProductApproval.GraphQL\ProductApproval.GraphQL.Infrastructure\ProductApproval.GraphQL.Infrastructure.csproj", "{2032076E-C2EF-426B-85E6-EDF9CC1D4715}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApproval.GraphQL.Api", "ProductApproval.GraphQL\ProductApproval.GraphQL.Api\ProductApproval.GraphQL.Api.csproj", "{B072F535-C32B-4F14-AE22-2EC5C3248E2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApproval.GraphQL.Persistense", "ProductApproval.GraphQL\ProductApproval.GraphQL.Persistense\ProductApproval.GraphQL.Persistense.csproj", "{9C85A548-8C4E-4EEE-92A7-1064106544F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApproval.GraphQL.Business", "ProductApproval.GraphQL.Business\ProductApproval.GraphQL.Business.csproj", "{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5930243-E33F-4637-B556-63DEADB321AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5930243-E33F-4637-B556-63DEADB321AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5930243-E33F-4637-B556-63DEADB321AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5930243-E33F-4637-B556-63DEADB321AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2032076E-C2EF-426B-85E6-EDF9CC1D4715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2032076E-C2EF-426B-85E6-EDF9CC1D4715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2032076E-C2EF-426B-85E6-EDF9CC1D4715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2032076E-C2EF-426B-85E6-EDF9CC1D4715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B072F535-C32B-4F14-AE22-2EC5C3248E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B072F535-C32B-4F14-AE22-2EC5C3248E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B072F535-C32B-4F14-AE22-2EC5C3248E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B072F535-C32B-4F14-AE22-2EC5C3248E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C85A548-8C4E-4EEE-92A7-1064106544F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C85A548-8C4E-4EEE-92A7-1064106544F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C85A548-8C4E-4EEE-92A7-1064106544F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C85A548-8C4E-4EEE-92A7-1064106544F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5930243-E33F-4637-B556-63DEADB321AD} = {D3E122B4-9408-4C85-B930-80238BB1FEC4}
+		{2032076E-C2EF-426B-85E6-EDF9CC1D4715} = {D3E122B4-9408-4C85-B930-80238BB1FEC4}
+		{B072F535-C32B-4F14-AE22-2EC5C3248E2D} = {D3E122B4-9408-4C85-B930-80238BB1FEC4}
+		{9C85A548-8C4E-4EEE-92A7-1064106544F4} = {D3E122B4-9408-4C85-B930-80238BB1FEC4}
+		{62F9B72D-BC60-45BB-AEA0-1561BB6C3B40} = {D3E122B4-9408-4C85-B930-80238BB1FEC4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B6B6E58-100E-4F42-A015-9D70BC0F256F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,56 @@
+<div class="row" *ngIf="productRequestFormGroup" [formGroup]="productRequestFormGroup">
+    <!-- Generic -->
+    <div class="col-md-3">
+        <mat-form-field>
+            <input matInput placeholder="Generic" #genericInput maxlength="40" formControlName="generic" required>
+            <button mat-button *ngIf="genericInput.value" matSuffix mat-icon-button aria-label="Clear"
+              (click)="clearField('generic')">
+              <mat-icon>close</mat-icon>
+            </button>
+            <mat-error>{{displayMessage.generic}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-md-1"></div>
+
+    <!-- Brand -->
+    <div class="col-md-3">
+        <mat-form-field>
+            <input matInput placeholder="Brand" #brandInput maxlength="40" formControlName="brand" required>
+            <button mat-button *ngIf="brandInput.value" matSuffix mat-icon-button aria-label="Clear"
+              (click)="clearField('brand')">
+              <mat-icon>close</mat-icon>
+            </button>
+            <mat-error>{{displayMessage.brand}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-md-1"></div>
+
+    <!-- Priority -->
+    <div class="col-md-3">
+            <mat-form-field>
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="requestPriorityId" required>
+                    <mat-option>-- Select Priority  --</mat-option>
+                    <mat-option *ngFor="let option of priorityOptions" [value]="option.value">{{ option.label }}</mat-option>                
+                </mat-select>
+            </mat-form-field>
+    </div>
+    <div class="col-md-1"></div>    
+</div>
+
+<div class="row" *ngIf="productRequestFormGroup" [formGroup]="productRequestFormGroup">
+      <!-- Comment -->
+      <div class="col-md-9">
+        <mat-form-field>
+            <mat-label>Leave a comment</mat-label>
+            <textarea formControlName="comment" #commentInput matInput ></textarea>
+                <button mat-button *ngIf="commentInput.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="commentInput.value = ''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            <mat-error>{{displayMessage.comment}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="col-md-1"></div>
+    
+</div>

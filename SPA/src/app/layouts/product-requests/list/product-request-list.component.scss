@@ -1,0 +1,123 @@
+@import '../../../../assets/scss/custom.scss';
+
+:host ::ng-deep .ui-table-product-requests {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    
+    .center-text {
+        text-align: center;
+    }
+   
+  
+
+    .ui-paginator {
+        .ui-dropdown {
+            float: left;
+        }
+    
+        .ui-paginator-current {
+            float: right;
+        }
+    }
+
+    .ui-progressbar {
+        height: 8px;
+        background-color: #D8DADC;
+    
+        .ui-progressbar-value {
+            background-color: #00ACAD;
+        }
+    }
+
+    .ui-column-filter {
+        display: block;
+    
+        input {
+            width: 100%;
+        }
+    }
+    .ui-table-caption {
+        padding-top: 3px !important;
+        height: 50px;
+    }
+    .ui-table-globalfilter-container {
+        float: right;
+        height: 20px;
+        input {
+            width: 200px;
+            font-weight: 200;
+        }
+    }
+   
+    .calendarFilter .ui-inputfield
+    {
+         min-width: 30em;
+         height: 27em;
+         width:70px !important;
+         margin: 0 0.2em !important;
+         font-size: 5em;
+    }
+
+    .ui-datepicker td span, .ui-datepicker td a {
+        padding: 0px;
+    }
+
+    .ui-table-caption {
+        border: 0 none;
+        padding: 12px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .ui-paginator {
+        border: 0 none;
+        padding: 1em;
+    }
+
+   
+
+    .ui-dropdown-label:not(.ui-placeholder) {
+        text-transform: uppercase;
+    }
+
+    .ui-table-tbody > tr > td .ui-column-title {
+        display: none;
+    }
+}
+
+.ui-dropdown {
+    min-width: 10em;
+    font-size: 10px;
+}
+body .ui-inputtext {
+    font-size: 10px;
+}
+/* Responsive */
+@media screen and (max-width: 64em) {
+    :host ::ng-deep .ui-table {
+        &.ui-table-product-requests {
+            .ui-table-thead > tr > th,
+            .ui-table-tfoot > tr > td {
+                display: none !important;
+            }
+            .ui-table-tbody > tr > td {
+                text-align: left;
+                display: block;
+                border: 0 none !important;
+                width: 100% !important;
+                float: left;
+                clear: left;
+                border: 0 none;
+
+                .ui-column-title {
+                    padding: .4em;
+                    min-width: 30%;
+                    display: inline-block;
+                    margin: -.4em 1em -.4em -.4em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+

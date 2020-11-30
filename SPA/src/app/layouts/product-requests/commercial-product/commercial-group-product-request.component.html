@@ -1,0 +1,37 @@
+<div class="main-content">
+  <div class="container-fluid">
+  
+    <form novalidate [formGroup]="editFormGroup">
+        <!-- Panel Header -->
+        <div class="panel-header">
+          <div class="d-md-flex flex-md-row">
+            <div class="mr-auto">
+              <h5 class="page-title-text">{{requestType}} Product Request</h5>
+            </div>
+
+            <!-- Action buttons -->
+            <app-action-buttons (onSaveProductRequest)="saveProductRequest($event)"></app-action-buttons>
+          </div>
+        </div>
+
+        <div class="body">
+          <!-- Request Details -->
+          <div class="card">
+            <!-- Card Header -->
+            <div class="request-details-header row" style="margin-left: 0px; margin-right: 0px;">
+              <div class="card-header col-md-11">
+                <h6 class="card-title-text">Request Details</h6>
+              </div>
+            </div>
+  
+            <!-- Card Body -->
+            <div class="card-body">
+              <!-- Request Details component -->
+              <app-request-details  [displayMessage]="displayMessage" [productRequestDetails]="commercialProductRequest"></app-request-details>
+
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

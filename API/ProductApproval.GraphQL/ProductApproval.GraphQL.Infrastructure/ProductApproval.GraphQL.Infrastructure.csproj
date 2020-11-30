@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GraphQL\Types\Input\ProductRequestGroup\**" />
+    <EmbeddedResource Remove="GraphQL\Types\Input\ProductRequestGroup\**" />
+    <None Remove="GraphQL\Types\Input\ProductRequestGroup\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200428025741_addingRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428025741_addingRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200428030814_addingRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428030814_addingRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200428031957_addingRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428031957_addingRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200428054554_addingRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428054554_addingRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200428054716_addingRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428054716_addingRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200428063716_changeRequestPriority-ProductRequest.cs" />
+    <Compile Remove="Migrations\20200428063716_changeRequestPriority-ProductRequest.Designer.cs" />
+    <Compile Remove="Migrations\20200504060238_ProductApprovalINIT.cs" />
+    <Compile Remove="Migrations\20200504060238_ProductApprovalINIT.Designer.cs" />
+    <Compile Remove="Migrations\20200504085625_AddTables.cs" />
+    <Compile Remove="Migrations\20200504085625_AddTables.Designer.cs" />
+    <Compile Remove="Migrations\20200505044639_newstuff.cs" />
+    <Compile Remove="Migrations\20200505044639_newstuff.Designer.cs" />
+    <Compile Remove="Migrations\20200508063747_test.cs" />
+    <Compile Remove="Migrations\20200508063747_test.Designer.cs" />
+    <Compile Remove="Migrations\20200508064840_test.cs" />
+    <Compile Remove="Migrations\20200508064840_test.Designer.cs" />
+    <Compile Remove="Migrations\20200508065332_adding_Manufacturer_Table.cs" />
+    <Compile Remove="Migrations\20200508065332_adding_Manufacturer_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200508065859_adding_Manufacturer_Table.cs" />
+    <Compile Remove="Migrations\20200508065859_adding_Manufacturer_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200508073310_adding_Manufacturer_Table.cs" />
+    <Compile Remove="Migrations\20200508073310_adding_Manufacturer_Table.Designer.cs" />
+    <Compile Remove="Migrations\20200510233254_ManufacturerEntity.cs" />
+    <Compile Remove="Migrations\20200510233254_ManufacturerEntity.Designer.cs" />
+    <Compile Remove="Migrations\20200510234327_Add-Manufacturer-Entity.cs" />
+    <Compile Remove="Migrations\20200510234327_Add-Manufacturer-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200511002048_Add-Manufacturer-Entity.cs" />
+    <Compile Remove="Migrations\20200511002048_Add-Manufacturer-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200511002305_Add-Manufacturer-Entity.cs" />
+    <Compile Remove="Migrations\20200511002305_Add-Manufacturer-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200511002419_Add-Manufacturer-Entity.cs" />
+    <Compile Remove="Migrations\20200511002419_Add-Manufacturer-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200511030655_Add-ProductDoseForm-Entity.cs" />
+    <Compile Remove="Migrations\20200511030655_Add-ProductDoseForm-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200511031022_Add-ProductDoseForm-Entity.cs" />
+    <Compile Remove="Migrations\20200511031022_Add-ProductDoseForm-Entity.Designer.cs" />
+    <Compile Remove="Migrations\20200512052616_adding-UOM-Types.cs" />
+    <Compile Remove="Migrations\20200512052616_adding-UOM-Types.Designer.cs" />
+    <Compile Remove="Migrations\20200512062831_change-UOM-Types-fields.cs" />
+    <Compile Remove="Migrations\20200512062831_change-UOM-Types-fields.Designer.cs" />
+    <Compile Remove="Migrations\20200513021212_update-productrequest-fields-test.cs" />
+    <Compile Remove="Migrations\20200513021212_update-productrequest-fields-test.Designer.cs" />
+    <Compile Remove="Migrations\20200513052742_adding_fields_domain.cs" />
+    <Compile Remove="Migrations\20200513052742_adding_fields_domain.Designer.cs" />
+    <Compile Remove="Migrations\20200513052917_adding_fields_domain.cs" />
+    <Compile Remove="Migrations\20200513052917_adding_fields_domain.Designer.cs" />
+    <Compile Remove="Migrations\20200601013842_add_autoguid_genearte.cs" />
+    <Compile Remove="Migrations\20200601013842_add_autoguid_genearte.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="autofac" Version="4.9.4" />
+    <PackageReference Include="GraphQL" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="microsoft.extensions.configuration.environmentvariables" Version="3.1.0" />
+    <PackageReference Include="microsoft.extensions.configuration.fileextensions" Version="3.1.0" />
+    <PackageReference Include="microsoft.extensions.configuration.json" Version="3.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ProductApproval.GraphQL.Business\ProductApproval.GraphQL.Business.csproj" />
+    <ProjectReference Include="..\ProductApproval.GraphQL.Core\ProductApproval.GraphQL.Core.csproj" />
+    <ProjectReference Include="..\ProductApproval.GraphQL.Persistense\ProductApproval.GraphQL.Persistense.csproj" />
+  </ItemGroup>
+
+</Project>

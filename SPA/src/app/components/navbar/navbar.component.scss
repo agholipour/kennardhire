@@ -1,0 +1,11 @@
+@import '../../../assets/scss/custom.scss';
+
+.navbar {
+    background-color: #1a1927 !important;
+    height: 85px;
+}
+
+// Css class for Navbar title
+.navbar-title {
+    @include text(Roboto, 28px, normal, normal, normal, normal, -0.06px, #ffffff);
+}

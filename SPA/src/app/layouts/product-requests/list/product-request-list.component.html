@@ -1,0 +1,80 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <customised-panel  [pageTitle]="pageTitle" [errorMessage$]="errorMessage$">
+            <div class="grid-toolbar-selector">
+                <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-text p-button-plain"
+                style="float: right; margin-left: .5em; font-size: .75em; margin-top: -27px;" (click) ="onCreateRequest()"></button>
+            </div>
+            <div class="body">
+                <p-table #dt 
+                    [value]="productRequests" 
+                    [columns]="cols" 
+                    [loading]="loading" 
+                    dataKey="id" 
+                    [rowHover]="true"
+                    [rows]="10" 
+                    [resizableColumns]="true" 
+                    columnResizeMode="expand"
+                    styleClass="ui-table-product-requests" 
+                    [reorderableColumns]="true"
+                    [paginator]="true" 
+                    [rows]="10" 
+                    [showCurrentPageReport]="true" 
+                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" 
+                    [rowsPerPageOptions]="[10,25,50]"
+                    [globalFilterFields]="['generic','brand','requestPriority']">
+
+                    <!-- Global Filter -->
+                    <ng-template pTemplate="caption">
+                        <div class="ui-table-globalfilter-container">
+                            <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+                            <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" 
+                                style="width:auto">
+                        </div>
+                    </ng-template>
+
+                    <!-- Header and Filter dropdown -->
+                    <ng-template pTemplate="header" let-columns>
+                        <!-- Header row -->
+                        <tr>
+                            <th *ngFor="let col of columns" [pSortableColumn]="col.field" [style.width]="col.width" pReorderableColumn pResizableColumn class="table-header-text">
+                                {{col.header}}
+                                <p-sortIcon [field]="col.field"></p-sortIcon>
+                            </th>
+                        </tr>
+                    </ng-template>
+
+                    <!-- Data Rows -->
+                    <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr [pSelectableRow]="rowData">
+                            <td *ngFor="let col of columns" [ngSwitch]="col.field">
+                                <div *ngSwitchCase="'generic'" class="table-data-text">
+                                    <span class="ui-column-title">Product Description</span>
+                                    &#123;&#123;rowData[col.field]&#125;&#125;
+                                </div>
+                                <div *ngSwitchCase="'brand'" class="table-data-text">
+                                    <span class="ui-column-title">Requesting Site</span>
+                                    &#123;&#123;rowData[col.field]&#125;&#125;
+                                </div>
+                                <div *ngSwitchCase="'requestPriority'" class="table-data-text">
+                                    <span class="ui-column-title">Type</span>
+                                    &#123;&#123;rowData[col.field]&#125;&#125;
+                                </div>
+
+                                <div *ngSwitchCase="'rowStatus'" class="center-text" >
+                                        <p-splitButton appendTo="body" icon="pi pi-cog"  [model]="rowData.actions" styleClass="ui-button-secondary" ></p-splitButton>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <!-- No Request found -->
+                    <ng-template pTemplate="emptymessage">
+                        <tr>
+                            <td colspan="4" style="text-align:center">No Request Found.</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </customised-panel>
+    </div>
+</div>
